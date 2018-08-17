@@ -9,16 +9,8 @@ return [
     'controller' => 'account',
     'action' => 'register'
   ],
-   'news/show' => [
-    'controller' => 'news',
-    'action' => 'show'
-   ],
   '' => [
     'controller' => 'main',
     'action' => 'index'
-  ],
-  'contact' => [
-    'controller' => 'main',
-    'action' => 'contact'
   ],
 ];

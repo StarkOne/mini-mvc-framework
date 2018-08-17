@@ -17,16 +17,16 @@ class Router
 
   public function add($route, $params)
   {
-    $route = '#^'. $route .'#';
+    $route = '#^'. $route .'$#';
     $this->router[$route] = $params;
   }
 
   public function match()
   {
     $url = trim($_SERVER['REQUEST_URI'], '/');
-    foreach ($this->router as $route => $parems) {
+    foreach ($this->router as $route => $params) {
       if(preg_match($route, $url, $matches)) {
-        $this->params = $parems;
+        $this->params = $params;
         return true;
       }
     }
